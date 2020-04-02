@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         handlerThread.start();
         mHandler = new Handler(handlerThread.getLooper());
 
-        mVlcModel = new VlcModel("rtsp://192.168.1.254/xxxx.mov", (SurfaceView) findViewById(R.id.surfaceV), mEventListener);
+        mVlcModel = new VlcModel("rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov", (SurfaceView) findViewById(R.id.surfaceV), mEventListener);
 
         //Android6.0以下不能隐藏状态栏
         if ((Build.VERSION.SDK_INT < Build.VERSION_CODES.M)) {
