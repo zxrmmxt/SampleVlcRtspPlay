@@ -118,9 +118,10 @@ public class VlcModel {
     }
 
     public synchronized void attachViews() {
-        if (mMediaPlayer == null) {
-            init();
+        if (mMediaPlayer != null) {
+            release();
         }
+        init();
         {
             mMediaPlayer.setEventListener(mEventListener);
             final IVLCVout vlcVout = mMediaPlayer.getVLCVout();
